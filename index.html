@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="./img/boat-outline.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./cartao.css">
+    <title>AOhorizonte</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1><ion-icon class="logo1" name="boat-outline"></ion-icon></h1>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Viagens</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Ofertas</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button onclick="abrirCadastro()"><a href="#">Cadastrar</a></button>
+                <button onclick="abrirLogin()"><a href="#">Entrar</a></button>
+
+                <div id="overlayCadastro" class="overlay">
+                    <div class="form-popup">
+                        <h3>Cadastro</h3>
+                        <form>
+                            <input type="text" id="nome" placeholder="Nome">
+                            <input type="email" id="emailCadastro" placeholder="E-mail">
+                            <input type="password" id="senhaCadastro" placeholder="Senha">
+                            <input type="password" id="confirmarSenha" placeholder="Confirmar Senha">
+                            <button type="button" class="submit-btn">Cadastrar</button>
+                            <button type="button" class="close-btn" onclick="fecharCadastro()">Fechar</button>
+                        </form>
+                    </div>
+                </div>
+            
+                <div id="overlayLogin" class="overlay">
+                    <div class="form-popup">
+                        <h3>Login</h3>
+                        <form>
+                            <input type="text" id="emailOuNome" placeholder="E-mail ou Nome">
+                            <input type="password" id="senhaLogin" placeholder="Senha">
+                            <button type="button" class="submit-btn">Entrar</button>
+                            <button type="button" class="close-btn" onclick="fecharLogin()">Fechar</button>
+                        </form>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="mobile-menu-icon">
+
+                <button onclick="menuShow()"><img class="icon" src="./img/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+            </ul>
+
+            <button id="open-modal"><a href="#">Entrar</a></button>
+        </div>
+    </header>
+
+    <section class="banner">
+        <h1>DESCUBRA UM <span>NOVO MUNDO</span></h1>
+    </section>
+
+
+    
+    <section class="banner-pricing">
+
+        <div class="cards">
+            <div class="card red">
+                <div class="card">
+                    <div id="card">
+                        <div class="content">
+                            <div class="title">Aventura no Alasca</div>
+                            <div class="price">$1.499.99</div>
+                            <div class="description">Experimente a majestade do Alasca em um cruzeiro que combina paisagens deslumbrantes, vida selvagem e atividades de aventura.</div>
+                          </div>
+                          <button id="bt">
+                                Compre a Passagem
+                          </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card blue">
+                <div class="card">
+                    <div id="card">
+                        <div class="content">
+                            <div class="title">Cruzeiro no Mediterrâneo</div>
+                            <div class="price">$1,299.99</div>
+                            <div class="description">Uma jornada inesquecível pelo Mediterrâneo, visitando cidades históricas e praias deslumbrantes, com experiências gastronômicas únicas.</div>
+                          </div>
+                          <button id="bt">
+                                Compre a Passagem
+                          </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card">
+                    <div id="card">
+                        <div class="content">
+                            <div class="title">Cruzeiro pelo Caribe</div>
+                            <div class="price">$799.99</div>
+                            <div class="description">Desfrute de uma semana incrível explorando as ilhas paradisíacas do Caribe, com paradas em destinos exóticos e atividades a bordo.</div>
+                          </div>
+                          <button id="bt">
+                                Compre a Passagem
+                          </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card green">
+                <div class="card">
+                    <div id="card">
+                        <div class="content">
+                            <div class="title">Exploração pelos Fiordes Noruegueses</div>
+                            <div class="price">$1,099.99</div>
+                            <div class="description">Navegue pelos fiordes espetaculares da Noruega, com paradas em vilarejos pitorescos e vistas deslumbrantes da natureza.</div>
+                          </div>
+                          <button id="bt">
+                                Compre a Passagem
+                          </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-container">
+        <div class="footer-content-1">
+            <p class="footer-p">
+                <a href="#">Página inicial</a>
+                <a href="#">Canal</a>
+                <a href="#">Saiba mais</a>
+                <a href="#">Contato</a>
+            </p>
+            <h1><ion-icon name="boat-outline"></ion-icon></h1> 
+            <h3>Rumo ao<span>Horizonte</span></h3>
+            <p class="footer-empresa">
+                Descubra o mundo a bordo de experiências inesquecíveis.
+            </p>
+        </div>
+        <div class="footer-content-2">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><a href="http://https://goo.gl/maps/1Ahv9nrFPVuzXEcQ8">
+                    Avenida Brasil, Jardim Paulista, São Paulo - Sp
+                </a></p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:vcavalcante739@gmail.com">
+                    vcavalcante739@gmail.com
+                </a></p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p><a href="tel:87981018098">(87)981018098</a></p>
+            </div>
+            <div>
+                <i class="fa fa-whatsapp"></i>
+                <p><a href="..." target="_blank">
+                    +55 (87)981018098
+                </a></p>
+            </div>
+        </div>
+        <div class="footer-content-3">
+            <p class="footer-empresa">
+                <span>Sobre a Empresa</span>
+                É uma empresa de cruzeiros dedicada a proporcionar experiências únicas e memoráveis em alto-mar. Fundada por amantes da navegação e da exploração, nossa missão é levar os passageiros a destinos paradisíacos, combinando conforto, aventura e cultura.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+            <hr>
+            <p>©2024 Web Front-End Desenvolve Ltda.</p>
+        </div>
+    </footer>
+
+    <div id="chatIcon" onclick="toggleChat()"><i><ion-icon name="chatbox-ellipses-outline"></ion-icon></i></div>
+    <div id="chatBox">
+        <div id="chatHeader">Chat</div>
+        <div id="chatContent">
+            <button onclick="respondToQuestion('Como posso resetar minha senha?')">Como posso resetar minha senha?</button><br>
+            <button onclick="respondToQuestion('Qual é o horário de funcionamento?')">Qual é o horário de funcionamento?</button><br>
+            <button onclick="respondToQuestion('Onde fica nossa sede?')">Onde fica nossa sede?</button><br>
+            <div id="chatResponse"></div>
+        </div>
+        <div id="chatFooter">Digite sua pergunta acima.</div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+</html>
